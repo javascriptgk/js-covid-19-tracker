@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Covid-19 Tracker</title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+	async function getCovidData(){
+		const jsonData = await fetch('https://api.covid19api.com/summary');
+
+		const jsData = await jsonData.json();
+		console.log(jsData.Countries[77]);
+		const country_details=jsData.Countries[77];
+		console.log(country_details.Country);
+	}
+	getCovidData();
+</script>
+</html>
